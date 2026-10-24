@@ -1,12 +1,12 @@
 using UnityEngine;
 
-// Arma do Felpudo: atira para a direita com o clique esquerdo.
+
 public class Arma : MonoBehaviour {
 
-  // Tempo mínimo entre tiros (segundos)
+  
   public float intervaloTiro = 0.25f;
   public float velocidadeTiro = 9f;
-  // De onde o tiro sai, relativo ao Felpudo
+ 
   public Vector2 saidaTiro = new Vector2 (0.9f, 0f);
 
   float proximoTiro;

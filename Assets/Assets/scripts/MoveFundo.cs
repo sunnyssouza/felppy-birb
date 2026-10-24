@@ -19,7 +19,7 @@ public class MoveFundo : MonoBehaviour {
 
     grafico = GetComponent<SpriteRenderer>();
 
-    // mainTextureOffset usa a textura principal do shader (_MainTex no Standard, _BaseMap no URP)
+   
     grafico.material.mainTextureOffset = new Vector2(offset, 0);
  
   }

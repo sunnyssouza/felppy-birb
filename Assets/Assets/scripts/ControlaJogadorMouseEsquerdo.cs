@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Pulo do Felpudo (agora na barra de espaço).
+
 public class ControlaJogadorMouseEsquerdo : MonoBehaviour {
 
-  // Velocidade para cima a cada pulo
+ 
   public float forcaPulo = 6f;
-  // Gravidade do Felpudo
+ 
   public float gravidade = 1.5f;
 
   bool comecou;

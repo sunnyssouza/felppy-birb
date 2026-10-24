@@ -1,8 +1,6 @@
 using UnityEngine;
 
-// Tiro criado por código (não precisa de prefab).
-// Do jogador: destrói inimigos e tira vida do boss.
-// Do boss: derrota o jogador.
+
 public class Projetil : MonoBehaviour {
 
   bool doJogador;
@@ -32,7 +30,7 @@ public class Projetil : MonoBehaviour {
     return projetil;
   }
 
-  // Círculo branco gerado uma vez e reaproveitado
+  
   static Sprite SpriteBola () {
     if (spriteBola != null) return spriteBola;
 
@@ -52,7 +50,7 @@ public class Projetil : MonoBehaviour {
   }
 
   void Update () {
-    // Saiu da tela: some
+  
     Vector3 p = transform.position;
     if (p.x > 6f || p.x < -6f || p.y > 7f || p.y < -7f) {
       Destroy (gameObject);

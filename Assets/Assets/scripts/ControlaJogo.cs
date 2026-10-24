@@ -2,16 +2,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
-// Controla o estado da partida: tempo da fase, pontuação, boss, vitória e derrota.
+
 public class ControlaJogo : MonoBehaviour {
 
   public static ControlaJogo instancia;
 
-  // Duração da fase (segundos) antes do boss aparecer
+  
   public float duracaoFase = 45f;
-  // Pontos por inimigo destruído com a arma
+ 
   public int pontosPorInimigo = 10;
-  // Pontos por derrotar o boss
+  
   public int pontosBoss = 100;
 
   int pontos;

@@ -1,22 +1,21 @@
 using System.Collections;
 using UnityEngine;
 
-// Boss do fim da fase (Uruca). Fica fora da tela até o tempo acabar,
-// entra pela direita, sobe e desce e atira no Felpudo.
+
 public class Boss : MonoBehaviour {
 
   public static Boss instancia;
 
   public int vidaMaxima = 15;
-  // Posição X onde ele para dentro da tela
+  
   public float xAlvo = 1.5f;
-  // Posição X onde ele espera fora da tela
+ 
   public float xFora = 6f;
   public float velocidadeEntrada = 2f;
-  // Movimento de sobe e desce
+ 
   public float amplitude = 2.5f;
   public float velocidadeVertical = 1.2f;
-  // Ataque
+ 
   public float intervaloTiro = 1.4f;
   public float velocidadeTiro = 4f;
 
