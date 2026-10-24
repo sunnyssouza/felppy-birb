@@ -1,6 +1,8 @@
 # felppy birb
 
-Jogo 2D feito no Unity 6 (6000.0.82f1, URP 2D) com o Felpudo.
+link Unity play:
+https://play.unity.com/en/games/ac0303ba-6aad-4bfb-b8e4-d4afabcd2550/webgl-builds
+
 
 ## Como jogar
 - **Espaço**: pular (também começa e reinicia o jogo)
