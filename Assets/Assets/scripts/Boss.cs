@@ -55,7 +55,6 @@ public class Boss : MonoBehaviour {
     Vector3 p = transform.position;
 
     if (!ativo) {
-      // Entrando pela direita
       p.x = Mathf.MoveTowards (p.x, xAlvo, velocidadeEntrada * Time.deltaTime);
       transform.position = p;
       if (Mathf.Approximately (p.x, xAlvo)) {
@@ -65,12 +64,10 @@ public class Boss : MonoBehaviour {
       return;
     }
 
-    // Sobe e desce
     tempoAtivo += Time.deltaTime;
     p.y = Mathf.Sin (tempoAtivo * velocidadeVertical) * amplitude;
     transform.position = p;
 
-    // Atira em direção ao Felpudo
     if (Time.time >= proximoTiro && alvo != null) {
       proximoTiro = Time.time + intervaloTiro;
       Vector2 origem = (Vector2) transform.position + new Vector2 (-0.8f, 0f);

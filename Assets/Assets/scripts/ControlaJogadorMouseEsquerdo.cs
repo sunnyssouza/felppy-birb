@@ -35,7 +35,6 @@ public class ControlaJogadorMouseEsquerdo : MonoBehaviour {
         }
       }
 
-      // Define a velocidade direto: cada pulo é sempre igual
       corpoJogador.linearVelocity = new Vector2 (0, forcaPulo);
     }
 

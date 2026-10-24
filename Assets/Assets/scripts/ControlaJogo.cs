@@ -29,7 +29,6 @@ public class ControlaJogo : MonoBehaviour {
   }
 
   void Update () {
-    // Depois do fim de jogo, espaço para recomeçar
     if (acabou) {
       if (PuloPressionado ()) {
         Time.timeScale = 1f;
@@ -38,7 +37,6 @@ public class ControlaJogo : MonoBehaviour {
       return;
     }
 
-    // Conta o tempo da fase; quando acaba, entra o boss
     if (comecou && !faseBoss) {
       tempoRestante -= Time.deltaTime;
       if (tempoRestante <= 0f) {
@@ -48,12 +46,10 @@ public class ControlaJogo : MonoBehaviour {
     }
   }
 
-  // Botão de pular: barra de espaço
   public static bool PuloPressionado () {
     return Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame;
   }
 
-  // Botão da arma: clique esquerdo do mouse
   public static bool TiroPressionado () {
     return Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame;
   }
@@ -62,18 +58,15 @@ public class ControlaJogo : MonoBehaviour {
   public bool Comecou () { return comecou; }
   public bool FaseBoss () { return faseBoss; }
 
-  // Chamado pelo jogador no primeiro pulo
   public void Comecar () {
     comecou = true;
   }
 
-  // Chamado pelo projétil quando destrói um inimigo
   public void InimigoDestruido () {
     if (acabou) return;
     pontos += pontosPorInimigo;
   }
 
-  // Chamado pelo Boss quando a vida dele chega a zero
   public void BossDerrotado () {
     if (acabou) return;
     pontos += pontosBoss;
@@ -107,7 +100,6 @@ public class ControlaJogo : MonoBehaviour {
     string textoTempo = faseBoss ? "BOSS!" : "Tempo: " + Mathf.CeilToInt (tempoRestante);
     GUI.Label (new Rect (0, 20 * escala, Screen.width - 20 * escala, 60 * escala), textoTempo, direita);
 
-    // Barra de vida do boss
     if (faseBoss && Boss.instancia != null && Boss.instancia.gameObject.activeSelf) {
       float largura = Screen.width - 40 * escala;
       float fracao = (float) Boss.instancia.Vida () / Boss.instancia.vidaMaxima;
